@@ -16,11 +16,13 @@ public class Filter implements IFilter<Integer> {
         ILogger logger = LoggerDC.getInstance();
         logger.log("Запускаем фильтрацию");
 
+        source.forEach(i -> logger.log("Элемент " + i + ((i < threshold) ? " проходит" : " не проходит")));
+
         List<Integer> result = source.stream()
                 .filter( integer -> integer < threshold)
                 .toList();
 
-        logger.log("Прошло фильтр " + result.size() + "элемента(ов) из " + source.size());
+        logger.log("Фильтр прошло " + result.size() + " элемента(ов) из " + source.size());
 
         return result;
     }

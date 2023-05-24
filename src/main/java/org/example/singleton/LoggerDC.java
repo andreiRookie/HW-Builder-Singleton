@@ -25,6 +25,6 @@ public class LoggerDC implements ILogger {
     @Override
     public void log(String msg) {
         System.out.println("[" + TIME_FORMATTER.format(LocalDateTime.now()) +
-                (++counter) + "] " + msg);
+                " " + (++counter) + "] " + msg);
     }
 }
