@@ -1,6 +1,6 @@
 package org.example.builder;
 
-public class Main {
+public class MainBuilder {
     public static void main(String[] args) {
         Person mom = new PersonBuilder()
                 .setName("Svetlana")
