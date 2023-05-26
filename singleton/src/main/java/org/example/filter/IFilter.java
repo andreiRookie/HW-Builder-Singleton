@@ -1,4 +1,4 @@
-package org.example.singleton.filter;
+package org.example.filter;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.example.builder;
+package org.example;
 
 public class PersonBuilder implements IPersonBuilder {
 

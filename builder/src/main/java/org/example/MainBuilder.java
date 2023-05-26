@@ -1,4 +1,4 @@
-package org.example.builder;
+package org.example;
 
 public class MainBuilder {
     public static void main(String[] args) {

@@ -1,7 +1,8 @@
-package org.example.singleton;
+package org.example;
 
-import org.example.singleton.filter.Filter;
-import org.example.singleton.filter.IFilter;
+import org.example.filter.Filter;
+import org.example.filter.IFilter;
+
 import java.util.*;
 
 public class MainSingleton {

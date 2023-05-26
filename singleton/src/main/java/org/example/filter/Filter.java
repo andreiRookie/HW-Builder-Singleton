@@ -1,7 +1,8 @@
-package org.example.singleton.filter;
+package org.example.filter;
 
-import org.example.singleton.ILogger;
-import org.example.singleton.LoggerDC;
+import org.example.ILogger;
+import org.example.LoggerDC;
+
 import java.util.List;
 
 public class Filter implements IFilter<Integer> {

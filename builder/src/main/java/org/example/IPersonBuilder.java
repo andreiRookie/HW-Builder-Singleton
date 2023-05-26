@@ -1,4 +1,4 @@
-package org.example.builder;
+package org.example;
 
 public interface IPersonBuilder {
     Person build();

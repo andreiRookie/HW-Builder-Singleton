@@ -1,4 +1,4 @@
-package org.example.singleton;
+package org.example;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

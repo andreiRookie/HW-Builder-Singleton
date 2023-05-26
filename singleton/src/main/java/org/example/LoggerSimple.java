@@ -1,20 +1,21 @@
-package org.example.singleton;
+package org.example;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class LoggerLazy implements ILogger {
+public class LoggerSimple implements ILogger {
+
     private int counter;
     private final DateTimeFormatter DT_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
-    private LoggerLazy() { }
+    private static LoggerSimple instance;
 
-    private static class LoggerHolder {
-        private static final LoggerLazy INSTANCE = new LoggerLazy();
+    private LoggerSimple() {}
 
-    }
-
-    public static LoggerLazy getInstance() {
-        return LoggerHolder.INSTANCE;
+    public static LoggerSimple getInstance() {
+        if (instance == null) {
+            instance = new LoggerSimple();
+        }
+        return instance;
     }
     @Override
     public void log(String msg) {
