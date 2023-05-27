@@ -1,10 +1,9 @@
 package org.example;
 
-import org.example.iterrible.Iterrible;
+import java.util.Iterator;
 import java.util.Random;
-import org.example.iterrible.MyIterator;
 
-public class Randoms implements Iterrible<Integer> {
+public class Randoms implements Iterable<Integer> {
 
     protected Random random;
     protected int min;
@@ -16,9 +15,9 @@ public class Randoms implements Iterrible<Integer> {
     }
 
     @Override
-    public MyIterator<Integer> iterator() {
+    public Iterator<Integer> iterator() {
 
-        return new MyIterator<>() {
+        return new Iterator<>() {
             @Override
             public Integer next() {
                 return random.nextInt(min, max);
