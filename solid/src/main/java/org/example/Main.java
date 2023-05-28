@@ -15,13 +15,9 @@ public class Main {
 
         System.out.println("В МАГАЗИНЕ В НАЛИЧИИ");
         printProducts(products);
-//        for (Map.Entry<String, Integer> productAndPrice : products.entrySet()) {
-//            System.out.println(productAndPrice.getKey() + " за " + productAndPrice.getValue() + " руб./шт.");
-//        }
 
         System.out.println("Введите два слова: название товара и количество. Или end");
         Scanner scanner = new Scanner(System.in);
-//        Purchase purchase = new Purchase();
 
         PurchaseCart purchaseCart = new PurchaseCart(products.size());
 
@@ -31,11 +27,9 @@ public class Main {
             String[] parts = line.split(" ");
             String product = parts[0];
             int count = Integer.parseInt(parts[1]);
-//            purchase.addPurchase(product, count);
 
             purchaseCart.addPurchase(new Purchase(product,count));
         }
-//        long sum = purchase.sum(products);
         long sum = purchaseCart.sum(products);
 
         purchaseCart.printPurchases(products);
